@@ -1,0 +1,12 @@
+(base) goyamjain@Goyams-MacBook-Air ~ % cd ~/flaskblog
+
+(base) goyamjain@Goyams-MacBook-Air flaskblog % source flaskblog/bin/activate
+
+source: no such file or directory: flaskblog/bin/activate
+(base) goyamjain@Goyams-MacBook-Air flaskblog % ls ~/flaskblog
+
+CACHEDIR.TAG	bin		flasblog	lib		pyvenv.cfg
+(base) goyamjain@Goyams-MacBook-Air flaskblog % source ~/flaskblog/bin/activate
+
+(flaskblog) (base) goyamjain@Goyams-MacBook-Air flaskblog % 
+
