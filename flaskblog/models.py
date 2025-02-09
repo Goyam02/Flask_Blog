@@ -1,6 +1,7 @@
 from datetime import datetime, timezone
 from itsdangerous import URLSafeTimedSerializer
-from flaskblog import db, login_manager,app
+from flaskblog import db, login_manager
+from flask import current_app
 from flask_login import UserMixin
 
 @login_manager.user_loader
@@ -17,12 +18,12 @@ class User(db.Model, UserMixin):
     posts = db.relationship('Post',backref='author',lazy=True)
 
     def get_reset_token(self,expires_sec=1800):
-        serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+        serializer = URLSafeTimedSerializer(current_app.config['SECRET_KEY'])
         return serializer.dumps({'user_id': self.id})
     
     @staticmethod
     def verify_reset_token(token,expires_sec=1800):
-        serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+        serializer = URLSafeTimedSerializer(current_app.config['SECRET_KEY'])
         try:
             user_id = serializer.loads(token, max_age=expires_sec)['user_id']
         except:
