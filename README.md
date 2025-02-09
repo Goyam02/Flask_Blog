@@ -35,6 +35,12 @@ Flask_Blog/
 │       ├── user_post.html # Posts by a specific user
 │       ├── reset_request.html  # Request password reset page
 │       ├── reset_token.html    # Reset password page
+│	├── about.html	   # About page
+│	├── account.html   #  User profile page (edit details & change profile picture)
+│	├── create_post.html	# Page to create a new blog post
+│	├── home.html	   #  Home page displaying blog posts
+│	├── main.html	   # Base template extended by other templates
+│
 │   ├── site.db            # SQLite database (ignored in .gitignore)
 │── config.py              # Application configuration (environment variables)
 │── run.py                 # Entry point for running the app
