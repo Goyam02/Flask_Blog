@@ -128,7 +128,7 @@ python run.py
 <hr>
 
 # 📜 License
-This project is licensed under the MIT License. You are free to use and modify it as per your needs.
+This project is licensed under the [MIT License](https://github.com/Goyam02/Flask_Blog/blob/master/LICENSE). You are free to use and modify it as per your needs.
 
 <hr>
 
